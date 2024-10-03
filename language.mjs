@@ -3,9 +3,9 @@ const DICTIONARY = {
         PLAY_AGAIN_QUESTION: "Play again (YES/no)? ",
         CONFIRM: "y",
     },
-    no: {
-        PLAY_AGAIN_QUESTION: "Spille en gang til (Ja/nei)? ",
-        CONFIRM: "j",
+   ro: {
+        PLAY_AGAIN_QUESTION: "Joacă din nou (Da/Nu)? ",
+        CONFIRM: "d",
     }
 };
 
