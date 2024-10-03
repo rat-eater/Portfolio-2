@@ -92,7 +92,7 @@ async function showSettings() {
         return; // Go back to main menu
     } else {
         print("Invalid choice. Returning to settings.");
-        await showSettings(); // Recursive call to show settings again
+        await showSettings(); // Callback to show settings again
     }
 }
 
@@ -100,7 +100,7 @@ async function changeLanguage() {
     clearScreen();
     print("Choose Language:");
     print("1. English");
-    print("2. Norwegian");
+    print("2. Romanian");
     
     let choice = await askQuestion("Select language: ");
     switch (choice) {
@@ -108,11 +108,11 @@ async function changeLanguage() {
             language = DICTIONARY.en;
             break;
         case '2':
-            language = DICTIONARY.no;
+            language = DICTIONARY.ro;
             break;
         default:
             print("Invalid choice. Returning to settings.");
-            await showSettings(); // Show settings if invalid
+            await showSettings(); // Show settings if command is invalid
     }
 }
 
@@ -200,7 +200,7 @@ async function getGameMoveFromCurrentPlayer() {
     let position = null;
     do {
         let rawInput = await askQuestion("Place your mark at (row col): ");
-        position = rawInput.split(" ").map(num => parseInt(num) - 1); // I used others help for here
+        position = rawInput.split(" ").map(num => parseInt(num) - 1); // I used help from others
     } while (!isValidPositionOnBoard(position));
 
     return position;
@@ -210,7 +210,7 @@ async function getComputerMove() {
     for (let row = 0; row < GAME_BOARD_SIZE; row++) {
         for (let col = 0; col < GAME_BOARD_SIZE; col++) {
             if (gameboard[row][col] === EMPTY) {
-                return [row, col]; // Simple logic: first available space
+                return [row, col]; // Plain logic: first available space
             }
         }
     }
