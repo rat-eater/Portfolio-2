@@ -1,6 +1,3 @@
-For this assignment, I used help from classmates, other programmers and some online tutorials. 
-I want to mention that I did use AI, but not to write any code. I used it to explain and help me understand what some functions do. AI has not written any of the code I am submitting for this assignment.
-
 Summarized Changes:
 
 1. Converting the player input
