@@ -1,5 +1,4 @@
 import { print, askQuestion } from "./io.mjs";
-import { debug, DEBUG_LEVELS } from "./debug.mjs";
 import { ANSI } from "./ansi.mjs";
 import DICTIONARY from "./language.mjs";
 import showSplashScreen from "./splash.mjs";
